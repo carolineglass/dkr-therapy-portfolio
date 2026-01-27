@@ -1,0 +1,218 @@
+/* ===== CSS Custom Properties ===== */
+:root {
+  /* Colors - update these with your palette */
+  --color-primary: #42676b;
+  --color-secondary: #fff;
+  --color-text: #000;
+  --color-background: #ffffff;
+
+  /* Typography */
+  --base-font-size: 12px;
+  --heading-font-font-family: "halyard-display", Georgia, serif;
+  --heading-font-font-style: normal;
+  --heading-font-font-weight: 300;
+  --heading-font-text-transform: none;
+  --heading-font-letter-spacing: .02em;
+  --heading-font-line-height: 1.25em;
+  --body-font-font-family: "halyard-display", system-ui, sans-serif;
+  --body-font-font-style: normal;
+  --body-font-font-weight: 300;
+  --body-font-text-transform: none;
+  --body-font-letter-spacing: .05em;
+  --body-font-line-height: 1.5em;
+  --heading-1-size: 4.2rem;
+  --heading-2-size: 1.8rem;
+  --heading-3-size: 2.2rem;
+  --heading-4-size: 4.2rem;
+  --large-text-size: 1.2rem;
+  --normal-text-size: 1rem;
+  --small-text-size: 1.3rem;
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 4rem;
+  --spacing-xl: 6rem;
+}
+
+/* ===== Reset ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== Base Styles ===== */
+html {
+  scroll-behavior: smooth;
+  font-size: var(--base-font-size);
+}
+
+body {
+  font-family: var(--body-font-font-family);
+  font-style: var(--body-font-font-style);
+  font-weight: var(--body-font-font-weight);
+  letter-spacing: var(--body-font-letter-spacing);
+  line-height: var(--body-font-line-height);
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font-font-family);
+  font-style: var(--heading-font-font-style);
+  font-weight: var(--heading-font-font-weight);
+  letter-spacing: var(--heading-font-letter-spacing);
+  line-height: var(--heading-font-line-height);
+}
+
+h1 { font-size: var(--heading-1-size); }
+h2 { font-size: var(--heading-2-size); }
+h3 { font-size: var(--heading-3-size); }
+h4 { font-size: var(--heading-4-size); }
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ===== Layout ===== */
+section {
+  padding: var(--spacing-lg) var(--spacing-md);
+}
+
+/* ===== Header & Navigation ===== */
+header {
+  position: sticky;
+  top: 0;
+  background-color: var(--color-background);
+  z-index: 100;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-sm) var(--spacing-md);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+nav ul {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+nav a:hover {
+  color: var(--color-primary);
+}
+
+.logo {
+  font-family: var(--heading-font-font-family);
+  font-size: 1.5rem;
+}
+
+/* ===== Hero Section ===== */
+#hero {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#hero h1 {
+  margin-bottom: var(--spacing-sm);
+}
+
+/* ===== Contact Form ===== */
+form {
+  max-width: 500px;
+  margin: var(--spacing-md) auto;
+}
+
+.form-group {
+  margin-bottom: var(--spacing-sm);
+}
+
+label {
+  display: block;
+  margin-bottom: var(--spacing-xs);
+  font-weight: 500;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: var(--spacing-sm);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid var(--color-primary);
+  border-color: transparent;
+}
+
+button[type="submit"] {
+  background-color: var(--color-primary);
+  color: white;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+button[type="submit"]:hover {
+  opacity: 0.9;
+}
+
+/* Honeypot field - hidden from humans */
+.hidden {
+  display: none;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: var(--spacing-md);
+  background-color: var(--color-secondary);
+}
+
+/* ===== Utility Classes ===== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+/* ===== Media Queries ===== */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+
+  nav ul {
+    gap: var(--spacing-sm);
+  }
+}
