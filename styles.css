@@ -1,20 +1,20 @@
 /* ===== CSS Custom Properties ===== */
 :root {
-  /* Colors - update these with your palette */
+  /* Colors */
   --color-primary: #42676b;
   --color-secondary: #fff;
   --color-text: #000;
   --color-background: #ffffff;
 
   /* Typography */
-  --base-font-size: 12px;
-  --heading-font-font-family: "halyard-display", Georgia, serif;
+  --base-font-size: 16px;
+  --heading-font-font-family: "Source Serif 4", Georgia, serif;
   --heading-font-font-style: normal;
   --heading-font-font-weight: 300;
   --heading-font-text-transform: none;
   --heading-font-letter-spacing: .02em;
   --heading-font-line-height: 1.25em;
-  --body-font-font-family: "halyard-display", system-ui, sans-serif;
+  --body-font-font-family: "Source Serif 4", Georgia, serif;
   --body-font-font-style: normal;
   --body-font-font-weight: 300;
   --body-font-text-transform: none;
@@ -90,15 +90,26 @@ ul {
 }
 
 /* ===== Layout ===== */
-section {
-  padding: var(--spacing-lg) var(--spacing-md);
+main section {
+  padding: var(--spacing-lg) var(--spacing-xl);
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* ===== Hero Section with Background ===== */
+.hero-section {
+  background-image: url('images/hero-background.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 670px;
+  display: flex;
+  flex-direction: column;
+  color: var(--color-secondary);
 }
 
 /* ===== Header & Navigation ===== */
 header {
-  position: sticky;
-  top: 0;
-  background-color: var(--color-background);
   z-index: 100;
 }
 
@@ -106,9 +117,10 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--spacing-sm) var(--spacing-md);
-  max-width: 1200px;
+  padding: var(--spacing-md) var(--spacing-xl);
+  max-width: 1440px;
   margin: 0 auto;
+  width: 100%;
 }
 
 nav ul {
@@ -116,27 +128,154 @@ nav ul {
   gap: var(--spacing-md);
 }
 
+nav a {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
 nav a:hover {
-  color: var(--color-primary);
+  opacity: 0.8;
 }
 
-.logo {
-  font-family: var(--heading-font-font-family);
-  font-size: 1.5rem;
-}
-
-/* ===== Hero Section ===== */
-#hero {
-  min-height: 60vh;
+/* ===== Hero Content ===== */
+.hero-content {
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin: 0 auto;
+  padding: 0 var(--spacing-xl);
+  width: 100%;
 }
 
-#hero h1 {
+.hero-title {
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.hero-title strong {
+  font-weight: 500;
+}
+
+.hero-quote {
+  font-size: 1rem;
+  font-weight: 300;
+  margin-top: var(--spacing-sm);
+}
+
+.hero-author {
+  font-size: 1rem;
+  font-weight: 300;
+  margin-top: var(--spacing-xs);
+}
+
+/* ===== Intro Section ===== */
+.intro-container {
+  display: flex;
+  gap: var(--spacing-lg);
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.intro-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  flex: 1;
+}
+
+.intro-highlight {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.intro-image {
+  flex: 1;
+  height: 100%;
+}
+
+.intro-image img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-position: 50% 50%;
+}
+
+@media (max-width: 768px) {
+  .intro-container {
+    flex-direction: column;
+  }
+}
+
+/* ===== About Section ===== */
+.about-container {
+  display: flex;
+  gap: var(--spacing-lg);
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  flex: 1;
+}
+
+.about-heading {
+  color: var(--color-primary);
+  font-weight: 300;
+}
+
+.about-image {
+  flex: 1;
+  height: 100%;
+}
+
+.about-image img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-position: 50% 50%;
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+  }
+}
+
+/* ===== Focus Section ===== */
+.focus-section {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+}
+
+.focus-container {
+  width: 80%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.focus-heading {
+  font-weight: 300;
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 1px solid var(--color-secondary);
   margin-bottom: var(--spacing-sm);
+}
+
+.focus-list {
+  list-style: disc;
+  padding-left: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
 }
 
 /* ===== Contact Form ===== */
@@ -198,21 +337,19 @@ footer {
   background-color: var(--color-secondary);
 }
 
-/* ===== Utility Classes ===== */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 var(--spacing-md);
-}
-
 /* ===== Media Queries ===== */
 @media (max-width: 768px) {
   nav {
     flex-direction: column;
     gap: var(--spacing-sm);
+    padding: var(--spacing-md);
   }
 
   nav ul {
     gap: var(--spacing-sm);
+  }
+
+  .hero-content {
+    padding: 0 var(--spacing-md);
   }
 }
