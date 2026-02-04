@@ -766,7 +766,6 @@ footer {
 
   .header-nav {
     flex-direction: row;
-    padding: var(--spacing-md);
   }
 
   .menu-toggle {
@@ -802,10 +801,6 @@ footer {
 
   .nav-menu a::after {
     background: rgb(var(--color-primary));
-  }
-
-  .hero-content {
-    padding: 0 var(--spacing-md);
   }
 
   .hero-section::after {
