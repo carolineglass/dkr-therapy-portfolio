@@ -7,7 +7,7 @@
   <title>Deborah K. Rosen, MA, EdM, LPC</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,700;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -33,26 +33,26 @@
 
   <main>
     <section class="intro-section">
-      <div class="intro-container">
-        <div class="intro-content">
+      <div class="container two-col">
+        <div class="content-col">
           <p class="intro-highlight">Congratulations for taking the initiative to research therapists for yourself or someone you care about.</p>
           <p>Talking or meeting with a therapist is a constructive way to work out coping strategies, improve relationships and feel more confident in your decisions. Exploring your thoughts and feelings with a professional and compassionate listener will help guide you in identifying areas of your life or behavior that are not serving you well, and in collaboration, we will find ways to manage and work through these obstacles.</p>
           <p>A key ingredient of therapy is having a safe and welcoming environment to either share or express your hopes, dreams and disappointments. A place to better understand what stands between you and your realization of your aspirations.</p>
         </div>
-        <div class="intro-image">
-          <img src="images/about-placeholder.jpg" alt="Therapy session">
+        <div class="image-col">
+          <img src="images/serene-rocks.webp" alt="Therapy session" class="cover-img">
         </div>
       </div>
     </section>
 
     <section id="about" class="about-section">
-      <div class="about-container">
-        <div class="about-image">
-          <img src="images/about-deb.jpg" alt="Deb Rosen">
+      <div class="container two-col">
+        <div class="image-col">
+          <img src="images/meet-deb.webp" alt="Deb Rosen" class="cover-img">
         </div>
-        <div class="about-content">
-          <h1 class="about-heading">Meet Deb Rosen</h1>
-          <p>For 30 years, Deb has counseled a diverse clientele in NYC, and most recently in Connecticut. She earned her MA, EdM in counseling psychology from Columbia University and her bachelor's degree from Boston University.</p>
+        <div class="content-col">
+          <h1 class="section-heading">Meet Deb Rosen</h1>
+          <p>For over 30 years, Deb has counseled a diverse clientele in NYC, and most recently in Connecticut. She earned her MA, EdM in counseling psychology from Columbia University and her bachelor's degree from Boston University.</p>
           <p>She started her career as an in-patient psychiatric rehabilitation counselor at Metropolitan Hospital in NYC. During this time she established and managed the first hospital-wide HIV support group, and was actively involved throughout the city in public awareness and education about AIDS.</p>
           <p>In 1993, she began counseling adolescents, young adults and their parents through NYC's Alternative High Schools. During this time, Deb worked with individuals and groups on a range of social and emotional issues. As a trained mediator and crisis intervention counselor, she was often called upon to assist in high risk situations. Deb's contributions during her tenure were rewarded by the United Federations of Teachers and Department of Education with a Counselor of the Year Award. In 2018, Deb relocated to Connecticut where she started her private practice. Currently, she works with graduate students and employees of the Yale community and other clients throughout CT.</p>
           <p>Her practice reflects an eclectic approach guided by her clients' individual goals and intentions. Deb's training in cognitive behavioral therapy through the Beck Institute, interpersonal psychotherapy and multicultural counseling, along with her decades of experience allow her to successfully tailor her approach to her clients' specific needs. She is dedicated to working collaboratively and creatively with her clients towards their therapy goals.</p>
@@ -61,9 +61,9 @@
       </div>
     </section>
 
-    <section id="focus" class="focus-section">
-      <div class="focus-container">
-        <h1 class="focus-heading">Areas of Focus</h1>
+    <section id="focus" class="focus-section section-full bg-primary">
+      <div class="container">
+        <h1 class="section-heading-light focus-heading">Areas of Focus</h1>
         <ul class="focus-list">
           <li>Anxiety and Depression</li>
           <li>Body positivity</li>
@@ -85,27 +85,63 @@
       </div>
     </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-        <input type="hidden" name="form-name" value="contact">
-        <p class="hidden">
-          <label>Don't fill this out if you're human: <input name="bot-field"></label>
-        </p>
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" required>
+    <section class="virtual-section">
+      <div class="virtual-container">
+        <div class="virtual-content">
+          <h1 class="virtual-heading">Virtual sessions</h1>
+          <p>Telehealth sessions are available if you cannot meet in person. Deb is currently seeing clients via an online video platform that is HIPAA compliant.</p>
         </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required>
+        <div class="virtual-image">
+          <img src="images/sunset-mountain.webp" alt="Mountain landscape at sunset">
         </div>
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
+      </div>
+    </section>
+
+    <section id="rates" class="rates-section section-full bg-primary">
+      <div class="container rates-container">
+        <h1 class="section-heading-light">Rates</h1>
+        <p>Rates per 50 minute session are $200. Payment through Venmo, PayPal, or credit card is accepted.</p>
+        <p>It's possible your health insurance company will reimburse you for services received outside of the company's provider network. Deb will provide you with a claim that you can submit to your insurance company for reimbursement.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <div class="container two-col">
+        <div class="contact-message">
+          <h1 class="section-heading">Message from Deb</h1>
+          <p>I invite you to contact me by completing this form and we can set up an initial consultation to discuss your concerns or needs.</p>
+          <p>Well done for taking the first step. I hope to hear from you just as soon as you are ready to take the next one.</p>
+          <p>Best wishes,</p>
+          <p class="contact-signature">Deb</p>
         </div>
-        <button type="submit">Send Message</button>
-      </form>
+        <div class="contact-form">
+          <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="contact">
+            <p class="hidden">
+              <label>Don't fill this out if you're human: <input name="bot-field"></label>
+            </p>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="first-name">First Name (required)</label>
+                <input type="text" id="first-name" name="first-name" required>
+              </div>
+              <div class="form-group">
+                <label for="last-name">Last Name (required)</label>
+                <input type="text" id="last-name" name="last-name" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email (required)</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message (required)</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit">Send</button>
+          </form>
+        </div>
+      </div>
     </section>
   </main>
 
