@@ -482,7 +482,6 @@ header {
   padding-left: 0;
   columns: 2;
   column-gap: var(--spacing-lg);
-  height: 450px;
   margin-top: var(--spacing-md);
 }
 
